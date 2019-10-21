@@ -9,3 +9,6 @@ Web-Application including a chatbot
 - improve diagnosis because the documentation starts at the patient's place.
 
 
+### Start Angular Project (Frontend, User Interface)
+
+ng serve
