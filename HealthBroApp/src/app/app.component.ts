@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'HealthBro';
+  title = 'MentalHealthBro';
+  speech_bubble = 'Check your health, Bro!';
 }
