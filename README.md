@@ -22,3 +22,6 @@ https://id.who.int/swagger/index.html
 ### WA Doku:
 https://cloud.ibm.com/services/conversation/crn:v1:bluemix:public:conversation:eu-gb:a%2f39d5947e7dad4db9b4baffd13d2a0369:ad09e1f5-f337-4eaf-8539-9af1fdf2d6e5::?paneId=manage
  
+## EVA One Click Deployment
+
+https://github.ibm.com/CognitiveAssetFactory/EVA
