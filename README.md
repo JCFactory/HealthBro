@@ -14,7 +14,7 @@ Web-Application including a chatbot
 ng serve
 
 
-### CD-10 API:
+### ICD-10 API:
 https://icd.who.int/icdapi/docs2/APIDoc-Version2/#icd-api-github-repository
 https://id.who.int/swagger/index.html
  
