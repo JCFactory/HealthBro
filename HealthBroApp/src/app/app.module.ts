@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NbThemeModule, NbLayoutModule, NbSidebarModule, NbButtonModule } from '@nebular/theme';
+import { NbThemeModule, NbLayoutModule, NbSidebarModule, NbButtonModule, NbChatModule } from '@nebular/theme';
 
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 
@@ -22,6 +22,7 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
     NbLayoutModule,
     NbSidebarModule, // NbSidebarModule.forRoot(), //if this is your app.module
     NbButtonModule,
+    NbChatModule
   ],
   providers: [],
   bootstrap: [AppComponent]
