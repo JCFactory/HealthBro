@@ -1,7 +1,55 @@
 ::ng-deep nb-layout-column {
 	justify-content: center;
 	display: flex;
+	background-color: black;
 }
 nb-chat {
-	width: 500px;
+	width: 700px;
+}
+
+.jack-img {
+	background-color: black;
+	width: 100px;
+	height: 100px;
+	margin-top: 100px;
+}
+
+.header-text {
+	color: white;
+}
+
+.jack-img-header {
+	width: 70px;
+	height: 70px;
+}
+
+.speech-bubble {
+	background: #ddf3cd;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	font-size: 1.2rem;
+	line-height: 1.3;
+	margin: 0 auto 40px;
+	max-width: 400px;
+	padding: 15px;
+	position: relative;
+	height: 100px;
+	margin: 20 20 20 20;
+}
+
+.speech-bubble p {
+	margin: 0 0 10px;
+	color: black;
+}
+.speech-bubble p:last-of-type {
+	margin-bottom: 0;
+}
+
+.speech-bubble::after {
+	border-left: 20px solid transparent;
+	border-top: 20px solid #ddf3cd;
+	bottom: -20px;
+	content: "";
+	position: absolute;
+	right: 20px;
 }

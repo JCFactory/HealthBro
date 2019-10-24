@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  title = 'MentalHealthBro';
+  title = 'HealthBro';
   speech_bubble = 'Check your health, Bro!';
 
   messages: any[];

@@ -1,17 +1,38 @@
 <nb-layout>
 
   <nb-layout-header fixed>
-    <!-- Insert header here -->
+    <img src="../assets/jacky_black_font.png" class="jack-img-header">
+    <span class="header-text">Talk to Jack</span>
   </nb-layout-header>
-  <nb-layout-column>
 
+  <nb-layout-column>
+    <div>
+      <img src="../assets/jacky_black_font.png" class="jack-img">
+    </div>
+    <div class="speech-bubble">
+      <p>Hello, I'm Jack!
+      </p>
+    </div>
+    <div class="speech-bubble">
+      <p>Check your health, Bro!
+      </p>
+    </div>
+    <div class="speech-bubble">
+      <p>I‘m healthy and I know it!
+      </p>
+    </div>
+    <div class="speech-bubble">
+      <p>Check your health, Bro!
+      </p>
+    </div>
+  </nb-layout-column>
+  <nb-layout-column>
     <!--The content below is only a placeholder and can be replaced.-->
     <div style="text-align:center">
       <h1>
         Welcome to {{ title }}!
       </h1>
-
-      <nb-chat title="Nebular Conversational UI" size="large">
+      <nb-chat title="Jack, your personal Health-Bro" size="large">
         <nb-chat-message *ngFor="let msg of messages" [type]="msg.type" [message]="msg.text" [reply]="msg.reply"
           [sender]="msg.user.name" [date]="msg.date" [files]="msg.files" [quote]="msg.quote" [latitude]="msg.latitude"
           [longitude]="msg.longitude" [avatar]="msg.user.avatar">
@@ -19,16 +40,11 @@
         <nb-chat-form (send)="sendMessage($event)" [dropFiles]="true">
         </nb-chat-form>
       </nb-chat>
-
-      <!-- <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="> -->
     </div>
-
-
-
-
-    <!-- <router-outlet></router-outlet> -->
-
   </nb-layout-column>
+  <!-- <nb-layout-column>
+    <img src="../assets/jack_white_font.png" class="jack-img">
+  </nb-layout-column> -->
 
   <nb-layout-footer fixed>
     <!-- Insert footer here -->
