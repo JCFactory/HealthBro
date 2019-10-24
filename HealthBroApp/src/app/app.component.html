@@ -1,9 +1,26 @@
 <nb-layout>
 
-  <nb-layout-header fixed>
-    <img src="../assets/jacky_black_font.png" class="jack-img-header">
+  <nb-layout-header fixed class="header">
+    <!-- <img src="../assets/jacky_black_font.png" class="jack-img-header"> -->
     <span class="header-text">Talk to Jack</span>
   </nb-layout-header>
+
+  <nb-layout-column>
+    <!--The content below is only a placeholder and can be replaced.-->
+    <div style="text-align:center">
+      <h1>
+        Welcome to {{ title }}!
+      </h1>
+      <nb-chat title="Jack, your personal Health-Bro" size="large">
+        <nb-chat-message *ngFor="let msg of messages" [type]="msg.type" [message]="msg.text" [reply]="msg.reply"
+          [sender]="msg.user.name" [date]="msg.date" [files]="msg.files" [quote]="msg.quote" [latitude]="msg.latitude"
+          [longitude]="msg.longitude" [avatar]="msg.user.avatar">
+        </nb-chat-message>
+        <nb-chat-form (send)="sendMessage($event)" [dropFiles]="true">
+        </nb-chat-form>
+      </nb-chat>
+    </div>
+  </nb-layout-column>
 
   <nb-layout-column>
     <div>
@@ -26,25 +43,6 @@
       </p>
     </div>
   </nb-layout-column>
-  <nb-layout-column>
-    <!--The content below is only a placeholder and can be replaced.-->
-    <div style="text-align:center">
-      <h1>
-        Welcome to {{ title }}!
-      </h1>
-      <nb-chat title="Jack, your personal Health-Bro" size="large">
-        <nb-chat-message *ngFor="let msg of messages" [type]="msg.type" [message]="msg.text" [reply]="msg.reply"
-          [sender]="msg.user.name" [date]="msg.date" [files]="msg.files" [quote]="msg.quote" [latitude]="msg.latitude"
-          [longitude]="msg.longitude" [avatar]="msg.user.avatar">
-        </nb-chat-message>
-        <nb-chat-form (send)="sendMessage($event)" [dropFiles]="true">
-        </nb-chat-form>
-      </nb-chat>
-    </div>
-  </nb-layout-column>
-  <!-- <nb-layout-column>
-    <img src="../assets/jack_white_font.png" class="jack-img">
-  </nb-layout-column> -->
 
   <nb-layout-footer fixed>
     <!-- Insert footer here -->
