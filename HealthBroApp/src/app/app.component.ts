@@ -42,4 +42,8 @@ export class AppComponent {
     //   setTimeout(() => { this.messages.push(botReply) }, 500);
     // }
   }
+
+  headClicked() {
+    console.log('head');
+  }
 }

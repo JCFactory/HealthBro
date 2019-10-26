@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NbThemeModule, NbLayoutModule, NbSidebarModule, NbButtonModule, NbChatModule } from '@nebular/theme';
 
 import { NbEvaIconsModule } from '@nebular/eva-icons';
+import 'babylonjs-viewer';
 
 @NgModule({
   declarations: [

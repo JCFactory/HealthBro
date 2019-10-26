@@ -24,10 +24,13 @@
     "@nebular/eva-icons": "^4.4.0",
     "@nebular/theme": "^4.4.0",
     "angular-emoji": "^0.1.45",
+    "babylonjs": "^4.0.3",
+    "babylonjs-viewer": "^4.0.3",
     "bootstrap": "^4.3.1",
     "core-js": "^2.5.4",
     "eva-icons": "^1.1.1",
     "ibm-watson": "^5.1.0",
+    "mongoose": "^5.7.7",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
