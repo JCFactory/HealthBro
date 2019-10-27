@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NbThemeModule, NbLayoutModule, NbSidebarModule, NbButtonModule, NbChatModule } from '@nebular/theme';
 
 import { NbEvaIconsModule } from '@nebular/eva-icons';
-import 'babylonjs-viewer';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,8 @@ import 'babylonjs-viewer';
     NbLayoutModule,
     NbSidebarModule, // NbSidebarModule.forRoot(), //if this is your app.module
     NbButtonModule,
-    NbChatModule
+    NbChatModule,
+    HttpModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
