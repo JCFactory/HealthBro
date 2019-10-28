@@ -9,22 +9,24 @@ import { Http, Response, Headers, RequestOptions } from '@angular/http';
 })
 
 export class AppComponent {
-  title = 'HealthBro';
-  speech_bubble = 'Check your health, Bro!';
+  public title = 'HealthBro';
+  public speech_bubble = 'Check your health, Bro!';
 
-  messages: any[];
-  Repdata;
-  valButton = 'Save';
-  errorMessage;
+  public messages: any[];
+  public Repdata;
+  public errorMessage;
 
   constructor(private newService: CommonService) {
   }
 
   ngOnInit() {
-    this.newService.getMessages().subscribed(data => this.Repdata = data);
   }
 
-  sendMessage(message) {
+  public getMessages() {
+    this.newService.getMessages().subscribe(data => this.Repdata = data);
+  }
+
+  public sendMessage(message) {
     this.newService.saveMessage(message).subscribe(data => {
       alert(data.data);
       this.ngOnInit();

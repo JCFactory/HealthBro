@@ -21,8 +21,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(function (req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-  res.setHeader('Access-Control-Allow-Headers', 'X.Requested-With, content-type');
-  res.setHeader('Access-Control-Allow-Credetials', true);
+  // res.setHeader('Access-Control-Allow-Headers', 'X.Requested-With, content-type');
+  // res.setHeader('Access-Control-Allow-Credetials', true);
   next();
 });
 
@@ -35,7 +35,8 @@ var ChatSchema = new Schema({
     type: String
   },
   timeStamp: {
-    type: Date.now
+    type: Date,
+    default: Date.now
   },
 });
 
@@ -80,6 +81,7 @@ app.get('api/getMessages', function (req, res) {
     if (err) {
       res.send(err);
     } else {
+      console.log(data);
       res.send(data);
     }
   });
