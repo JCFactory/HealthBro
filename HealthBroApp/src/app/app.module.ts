@@ -1,4 +1,3 @@
-import { CommonService } from './../services/common.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -8,8 +7,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NbThemeModule, NbLayoutModule, NbSidebarModule, NbButtonModule, NbChatModule } from '@nebular/theme';
 
 import { NbEvaIconsModule } from '@nebular/eva-icons';
-import { HttpModule } from '@angular/http';
-import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,11 +22,9 @@ import { HttpClientModule } from '@angular/common/http';
     NbLayoutModule,
     NbSidebarModule, // NbSidebarModule.forRoot(), //if this is your app.module
     NbButtonModule,
-    NbChatModule,
-    HttpModule,
-    HttpClientModule
+    NbChatModule
   ],
-  providers: [CommonService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

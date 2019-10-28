@@ -19,50 +19,48 @@ export class AppComponent {
   constructor(private newService: CommonService) {
   }
 
-  ngOnInit() {
-  }
 
-  public getMessages() {
-    this.newService.getMessages().subscribe(data => this.Repdata = data);
-  }
+  // public getMessages() {
+  //   this.newService.getMessages().subscribe(data => this.Repdata = data);
+  // }
 
-  public sendMessage(message) {
-    this.newService.saveMessage(message).subscribe(data => {
-      alert(data.data);
-      this.ngOnInit();
-    },
-      error => this.errorMessage = error);
+  // public sendMessage(message) {
+  //   this.newService.saveMessage(message).subscribe(data => {
+  //     alert(data.data);
+  //     this.ngOnInit();
+  //   },
+  //     error => this.errorMessage = error);
 
-    // const files = !event.files ? [] : event.files.map((file) => {
-    //   return {
-    //     url: file.src,
-    //     type: file.type,
-    //     icon: 'file-text-outline',
-    //   };
-    // });
+  //   // const files = !event.files ? [] : event.files.map((file) => {
+  //   //   return {
+  //   //     url: file.src,
+  //   //     type: file.type,
+  //   //     icon: 'file-text-outline',
+  //   //   };
+  //   // });
 
-    // this.messages.push({
-    //   text: event.message,
-    //   date: new Date(),
-    //   reply: true,
-    //   type: files.length ? 'file' : 'text',
-    //   files: files,
-    //   user: {
-    //     name: 'Jonh Doe',
-    //     avatar: 'https://i.gifer.com/no.gif',
-    //   },
-    // });
-    // // const botReply = this.chatShowcaseService.reply(event.message);
-    // // if (botReply) {
-    // //   setTimeout(() => { this.messages.push(botReply) }, 500);
-    // // }
-  }
+  //   // this.messages.push({
+  //   //   text: event.message,
+  //   //   date: new Date(),
+  //   //   reply: true,
+  //   //   type: files.length ? 'file' : 'text',
+  //   //   files: files,
+  //   //   user: {
+  //   //     name: 'Jonh Doe',
+  //   //     avatar: 'https://i.gifer.com/no.gif',
+  //   //   },
+  //   // });
+  //   // // const botReply = this.chatShowcaseService.reply(event.message);
+  //   // // if (botReply) {
+  //   // //   setTimeout(() => { this.messages.push(botReply) }, 500);
+  //   // // }
+  // }
 
-  deleteMessage(id) {
-    this.newService.deleteMessage(id).subscribe(data => { alert(data.data); this.ngOnInit(); }, error => this.errorMessage = error);
-  }
+  // deleteMessage(id) {
+  //   this.newService.deleteMessage(id).subscribe(data => { alert(data.data); this.ngOnInit(); }, error => this.errorMessage = error);
+  // }
 
-  headClicked() {
-    console.log('head');
-  }
+  // headClicked() {
+  //   console.log('head');
+  // }
 }
