@@ -37,6 +37,24 @@
       <div id="payload-response" class="payload"></div>
     </div>
   </div>
+  <script>
+    function getChats() {
+
+      $.get("/chats", (chats) => {
+
+        chats.forEach(addChat)
+
+      })
+
+    }
+
+    function addChat(chatObj) {
+
+      $("#messages").append(`<h5>${chatObj.name} </h5><p>${chatObj.chat}</p>`);
+
+    }
+
+  </script>
 
   <script src="js/common.js"></script>
   <script src="js/api.js"></script>
