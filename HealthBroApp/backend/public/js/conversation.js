@@ -2,6 +2,7 @@
 // all display and behaviors of the conversation column of the app.
 /* eslint no-unused-vars: "off" */
 /* global Api: true, Common: true*/
+import { saveData } from './server';
 
 var ConversationPanel = (function () {
   var settings = {
@@ -326,6 +327,9 @@ var ConversationPanel = (function () {
   function inputKeyDown(event, inputBox) {
     // Submit on enter key, dis-allowing blank messages
     if (event.keyCode === 13 && inputBox.value) {
+      // save message to mongodb
+      saveData(inputBox.value);
+      // send message to watson
       sendMessage(inputBox.value);
       // Clear input box for further messages
       inputBox.value = '';

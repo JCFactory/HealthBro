@@ -7,7 +7,6 @@ app.use(express.static(__dirname))
 var conString = "mongodb://127.0.0.1:27017/chats"
 
 var Chat = mongoose.model("Chat", {
-  name: String,
   message: String,
   timestamp: { type: Date, default: Date.now }
 })
@@ -28,13 +27,8 @@ app.post("/chats", async (req, res) => {
   }
 })
 
-var dummyChat = {
-  name: "jacky",
-  message: "Hey Marvin"
-}
-
-function saveData() {
-  var chat = new Chat(dummyChat);
+function saveData(message) {
+  var chat = new Chat(message);
   chat.save();
 }
 
