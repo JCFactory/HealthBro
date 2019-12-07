@@ -6,13 +6,15 @@ app.use(express.static(__dirname))
 
 var conString = "mongodb://127.0.0.1:27017/chats"
 
-var Chats = mongoose.model("Chats", {
+var Chat = mongoose.model("Chat", {
   name: String,
-  chat: String
+  message: String,
+  timestamp: { type: Date, default: Date.now }
 })
 
-mongoose.connect(conString, (err) => {
+mongoose.connect(conString, { useUnifiedTopology: true, useNewUrlParser: true }, (err) => {
   console.log("Database connection", err)
+  saveData()
 })
 
 app.post("/chats", async (req, res) => {
@@ -25,6 +27,16 @@ app.post("/chats", async (req, res) => {
     console.error(error)
   }
 })
+
+var dummyChat = {
+  name: "jacky",
+  message: "Hey Marvin"
+}
+
+function saveData() {
+  var chat = new Chat(dummyChat);
+  chat.save();
+}
 
 app.listen(3020, () => {
   console.log("Well done, now I am listening...")
