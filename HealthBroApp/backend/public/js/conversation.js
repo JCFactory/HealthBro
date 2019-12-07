@@ -27,7 +27,7 @@ var ConversationPanel = (function () {
   // Initialize the module
   function init() {
     chatUpdateSetup();
-    Api.getSessionId(function() {
+    Api.getSessionId(function () {
       Api.sendRequest('', null);
     });
     setupInputBox();
@@ -124,7 +124,7 @@ var ConversationPanel = (function () {
   function displayMessage(newPayload, typeValue) {
     var isUser = isUserMessage(typeValue);
     //var textExists = newPayload.generic;
-    if ((newPayload.output && newPayload.output.generic) ||  newPayload.input){
+    if ((newPayload.output && newPayload.output.generic) || newPayload.input) {
       // Create new message generic elements
       var responses = buildMessageDomElements(newPayload, isUser);
       var chatBoxElement = document.querySelector(settings.selectors.chatBox);
@@ -215,7 +215,8 @@ var ConversationPanel = (function () {
         for (i = 0; i < optionsList.length; i++) {
           if (optionsList[i].value) {
             list += '<li><div class="options-list" onclick="ConversationPanel.sendMessage(\'' +
-            optionsList[i].value.input.text + '\');" >' + optionsList[i].label + '</div></li>';
+              optionsList[i].value.input.text + '\');" >' + optionsList[i].label + '</div></li>';
+            $.post("http://localhost:3020/chats", optionsList[i].value.input.text)
           }
         }
         list += '</ul>';
